@@ -1,0 +1,45 @@
+/**
+ * @author Belitski Marat
+ * @date 29.12.2023
+ * @project TMS_AnOnl_17_Lesson_5
+ */
+
+//Задача 5. Отсортировать линии квадратного массива
+
+public class SortLine {
+    public static void main(String[] args) {
+        int[][] array = new int[5][5];
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = (int) (Math.random() * 89) + 10;
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        int exit = 5;
+        for (int i = 0; i < array.length; i++) {
+            while (exit != 0) {
+                for (int j = 1; j < array[i].length; j++) {
+                    if (array[i][j - 1] > array[i][j]) {
+                        int temp = array[i][j - 1];
+                        array[i][j - 1] = array[i][j];
+                        array[i][j] = temp;
+                    }
+                }
+                exit--;
+            }
+            exit = 5;
+        }
+        System.out.println();
+
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
