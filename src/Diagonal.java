@@ -23,10 +23,10 @@ public class Diagonal {
 
         System.out.println();
 
-        int diagonal = 0;  // можно выбрать диагональ 0т -4 до 4
+
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                if (j == i + diagonal) {
+                if (j == i) {
                     System.out.print(array[i][j] + " ");
                 } else {
                     System.out.print("  ");

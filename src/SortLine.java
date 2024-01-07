@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * @author Belitski Marat
  * @date 29.12.2023
@@ -18,19 +20,8 @@ public class SortLine {
             System.out.println();
         }
 
-        int exit = 5;
-        for (int i = 0; i < array.length; i++) {
-            while (exit != 0) {
-                for (int j = 1; j < array[i].length; j++) {
-                    if (array[i][j - 1] > array[i][j]) {
-                        int temp = array[i][j - 1];
-                        array[i][j - 1] = array[i][j];
-                        array[i][j] = temp;
-                    }
-                }
-                exit--;
-            }
-            exit = 5;
+        for (int[] ints : array) {
+            Arrays.sort(ints);
         }
         System.out.println();
 
